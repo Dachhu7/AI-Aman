@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Capabilities</title>
+    <title>Contact - AI Aman Enterprise</title>
     <link rel="icon" type="image/png" href="/images/logo.png">
 
     <!-- Bootstrap CSS CDN Link -->
@@ -92,103 +92,9 @@
 
 
 
-<!-- Contact Section Starts -->
-<section class="vconnect-contact-wrapper" id="contact">
-  <div class="vconnect-contact-intro">
-    <p class="vconnect-contact-small">Let’s Talk</p>
-    <h2 class="vconnect-contact-heading">We’d Love to Hear From You</h2>
-    <p class="vconnect-contact-desc">
-      Reach out for collaboration, queries, or a simple hello.
-    </p>
-  </div>
 
-  <div class="vconnect-contact-grid">
-    <div class="vconnect-contact-info">
-      <div class="vconnect-info-item">
-        <span class="vconnect-info-label">Address:</span>
-        <span class="vconnect-info-text"> Bengaluru</span>
-      </div>
-      <div class="vconnect-info-item">
-        <span class="vconnect-info-label">Email:</span>
-        <a href="" class="vconnect-info-text"></a>
-      </div>
-      <div class="vconnect-info-item">
-        <span class="vconnect-info-label">Website:</span>
-        <a href="" target="_blank" class="vconnect-info-text"></a>
-      </div>
-    </div>
 
-    <form id="contactForm" action="process_contact.php" method="POST" class="vconnect-contact-form">
-      <input type="text" id="name" name="name" placeholder="Your Name" required />
-      <input type="email" id="email" name="email" placeholder="Your Email" required />
-      <input type="text" id="mobile" name="mobile" placeholder="Mobile Number" pattern="\d{10}" required />
-      <textarea id="message" name="message" rows="4" placeholder="Your Message" required></textarea>
-      <button type="submit">Send Message</button>
-    </form>
-  </div>
-</section>
-<!-- Contact Section Ends -->
 
-  <!-- Success Dialog Box -->
-  <div class="modal fade" id="successModal" tabindex="-1" aria-labelledby="successModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="successModalLabel">Success!</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          Thank you for contacting us! Your details have been successfully submitted.
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <script>
-    // Initialize EmailJS
-    emailjs.init("Xm1izpSwH-ERKRusj");
-
-    // JavaScript for form submission
-    document.getElementById("contactForm").addEventListener("submit", function (e) {
-      e.preventDefault(); // Prevent default form submission
-
-      // Get form data
-      const name = document.getElementById("name").value;
-      const email = document.getElementById("email").value;
-      const mobile = document.getElementById("mobile").value;
-      const message = document.getElementById("message").value;
-
-      // EmailJS email parameters
-      const emailParams = {
-        from_name: name,
-        email: email,
-        mobile: mobile,
-        message: message,
-      };
-
-      // Send email using EmailJS
-      emailjs
-        .send("service_vgkp7hc", "template_pwwex38", emailParams)
-        .then(
-          (response) => {
-            console.log("SUCCESS!", response.status, response.text);
-            // Show success dialog box
-            var myModal = new bootstrap.Modal(document.getElementById('successModal'));
-            myModal.show();
-
-            // Reset the form after submission
-            document.getElementById("contactForm").reset(); 
-          },
-          (error) => {
-            console.error("FAILED...", error);
-            alert("There was an error submitting your details. Please try again.");
-          }
-        );
-    });
-  </script>
 
     <!-- Back to Top Button -->
     <button
