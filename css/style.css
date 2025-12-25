@@ -57,7 +57,7 @@ body {
 
 /* Logo Image */
 .topbar-logo img {
-  height: 60px;
+  height: 50px;
   width: auto;
   object-fit: contain;
   filter: drop-shadow(0 6px 14px rgba(184, 134, 11, 0.4));
@@ -174,154 +174,94 @@ body {
 }
 
 .footer-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 10px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 10px;
 }
 
-/* Footer Logo & Brand */
+/* Footer Logo */
 .footer-logo {
-    height: 110px;
-    object-fit: contain;
-    display: block;
-    margin: 0 auto;
-    filter: brightness(1.2) contrast(1.2) drop-shadow(0 0 18px rgba(255, 215, 119, 0.7));
-    transition: transform 0.3s ease, filter 0.3s ease;
+  height: 70px;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto 12px;
+  filter: brightness(1.2) contrast(1.2)
+          drop-shadow(0 0 18px rgba(255, 215, 119, 0.7));
+  transition: transform 0.3s ease, filter 0.3s ease;
 }
 
-.footer-brand h3 {
-    font-size: 2.5rem;
-    font-weight: bold;
-    letter-spacing: 2px;
-    color: #f5d77a;
-    transition: text-shadow 0.3s ease;
+.footer-logo:hover {
+  transform: scale(1.05);
+}
+
+/* Footer Tagline */
+.footer-tagline {
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+
+  background: linear-gradient(
+    135deg,
+    #ffd777,
+    #ffebaf,
+    #c9a23f
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  animation: goldFlow 6s linear infinite;
 }
 
 /* Navigation Links */
 .link-group a {
-    color: #f5d77a;
-    text-decoration: none;
-    font-size: 1rem;
-    position: relative;
-    transition: color 0.3s ease;
+  color: #f5d77a;
+  text-decoration: none;
+  font-size: 1rem;
+  position: relative;
+  transition: color 0.3s ease;
 }
 
 .link-group a::after {
-    content: "";
-    position: absolute;
-    left: 50%;
-    bottom: -2px;
-    width: 0;
-    height: 2px;
-    background-color: #f5d77a;
-    transition: width 0.3s ease, left 0.3s ease;
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -2px;
+  width: 0;
+  height: 2px;
+  background-color: #f5d77a;
+  transition: width 0.3s ease, left 0.3s ease;
 }
 
 .link-group a:hover {
-    color: #ffffff;
+  color: #ffffff;
 }
 
 .link-group a:hover::after {
-    width: 100%;
-    left: 0;
-}
-
-/* Footer Sections */
-.footer-sections {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 40px;
-    margin-top: 20px;
-}
-
-.footer-section {
-    text-align: center;
-    max-width: 250px;
-}
-
-.footer-section h3 {
-  position: relative;
-  font-size: 1.8rem;
-  font-weight: 700;
-  color: #f5d77a;
-  padding-bottom: 10px;
-  margin-bottom: 20px;
-  display: inline-block;
-}
-
-.footer-section h3::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  height: 4px;
   width: 100%;
-  background: linear-gradient(to right, #c9a23f, #ffd777);
-  border-radius: 5px;
-  box-shadow: 0 0 10px rgba(255, 215, 119, 0.6);
-}
-
-.footer-section ul {
-    list-style: none;
-    padding: 0;
-    text-align: center;
-}
-
-.footer-section ul li {
-    margin: 8px 0;
-}
-
-.footer-section ul li a {
-    color: #f5d77a;
-    text-decoration: none;
-    font-size: 1rem;
-    position: relative;
-}
-
-.footer-section ul li a:hover {
-    color: #ffffff;
-}
-
-/* Contact Section */
-.footer-section.contactus p {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    justify-content: center;
-    color: #f5d77a;
-}
-
-.footer-section.contactus i {
-    color: #ffd777;
-}
-
-/* Social Buttons */
-.social-links button {
-    margin: 10px;
-    padding: 10px 14px;
-    font-size: 1.2rem;
-    border: 2px solid #f5d77a;
-    background-color: transparent;
-    color: #f5d77a;
-    transition: all 0.3s ease;
-}
-
-.social-links button:hover {
-    background-color: #ffd777;
-    color: #000;
-    transform: scale(1.15);
+  left: 0;
 }
 
 /* Divider */
 .footer-divider {
-    border-top: 1px solid rgba(245, 215, 122, 0.4);
-    margin: 20px 0;
+  border-top: 1px solid rgba(245, 215, 122, 0.4);
+  margin: 20px 0;
 }
 
 /* Copyright */
 footer p {
-    color: #f5d77a;
+  color: #f5d77a;
+}
+
+/* Gold animation */
+@keyframes goldFlow {
+  0% {
+    background-position: 0% center;
+  }
+  100% {
+    background-position: 200% center;
+  }
 }
 
 /* Styling back to top button */
@@ -377,7 +317,7 @@ footer p {
 
 
 /* ======================================================
-   GLOBAL NORMALIZATION (FIXES PADDING & BOX ISSUES)
+   GLOBAL NORMALIZATION
 ====================================================== */
 
 *,
@@ -387,7 +327,7 @@ footer p {
 }
 
 /* ======================================================
-   HERO SECTION – FLOATING BACKGROUND (CANVAS)
+   HERO SECTION – REAL-WORLD ENTERPRISE REFINEMENT
 ====================================================== */
 
 .hero-section {
@@ -395,14 +335,24 @@ footer p {
   min-height: 100vh;
   display: flex;
   align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: clamp(110px, 14vh, 160px) 20px;
-  background: linear-gradient(
-    180deg,
-    #fff2cc,
-    #ffffff
-  );
+  justify-content: flex-start;
+  text-align: left;
+  padding: clamp(110px, 14vh, 160px) 7vw;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(10, 10, 10, 0.9) 0%,
+      rgba(10, 10, 10, 0.68) 40%,
+      rgba(10, 10, 10, 0.28) 68%,
+      rgba(10, 10, 10, 0.08) 100%
+    ),
+    url("/images/hero-bg.png");
+
+  background-size: cover;
+  background-position: center right;
+  background-repeat: no-repeat;
+
   overflow: hidden;
 }
 
@@ -411,6 +361,7 @@ footer p {
   position: absolute;
   inset: 0;
   z-index: 0;
+  opacity: 0.18; /* refined */
 }
 
 /* AURA CANVAS */
@@ -418,68 +369,175 @@ footer p {
   position: absolute;
   inset: 0;
   z-index: 1;
+  opacity: 0.14; /* refined */
+  filter: blur(8px);
 }
 
-/* CONTENT */
+/* ======================================================
+   CONTENT BLOCK
+====================================================== */
+
 .hero-text {
   position: relative;
   z-index: 3;
-  max-width: 860px;
+  max-width: 640px; /* slightly wider for breathing space */
 }
 
-/* heading */
+/* ======================================================
+   HEADING (REAL-WORLD TYPOGRAPHY RHYTHM)
+====================================================== */
+
 .hero-text h1 {
-  font-size: clamp(46px, 6vw, 70px);
+  font-size: clamp(44px, 5.6vw, 68px); /* slightly refined */
   font-weight: 900;
-  line-height: 1.1;
-  margin-bottom: 26px;
-  color: #1a1a1a;
-  white-space: nowrap;
+  line-height: 1.08; /* real-world readability */
+  margin-bottom: 22px; /* tighter rhythm */
+  color: #ffffff;
+  white-space: normal;
 }
 
-/* gold brand */
+/* GOLD HIGHLIGHT LINE */
 .hero-text .highlight {
-  background: linear-gradient(135deg, #2a2822, #5e5d5b, #e7e6e3);
-  background-size: 200% auto;
+  display: block;
+  margin-top: 10px;
+
+  font-size: 0.72em; /* 🔥 slightly smaller, real-world ratio */
+  font-weight: 900;
+  letter-spacing: 0.2px;
+
+  background: linear-gradient(
+    135deg,
+    #ffe08a,
+    #ffefc2,
+    #cfa13b
+  );
+
+  background-size: 220% auto;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  animation: goldFlow 5s linear infinite;
+
+  animation: goldFlow 6s linear infinite;
 }
 
-/* subtitle */
+
+/* ======================================================
+   SUBTITLE (ENTERPRISE SPACING)
+====================================================== */
+
 .typed-text {
-  font-size: clamp(18px, 2.2vw, 22px);
-  line-height: 1.7;
-  color: #333;
-  margin-bottom: 48px;
+  font-size: clamp(16px, 1.9vw, 20px); /* slightly refined */
+  line-height: 1.75;
+
+  /* 🔥 enterprise gold-muted tone */
+  color: rgba(255, 235, 175, 0.9);
+
+  margin-bottom: 52px;
+  max-width: 520px;
+
+  /* subtle real-world polish */
+  letter-spacing: 0.15px;
+  font-weight: 400;
 }
 
-/* CTA */
+/* ======================================================
+   CTA BUTTON – PRECISION ENTERPRISE STYLE (UNIQUE)
+====================================================== */
+
 .cta-button {
-  padding: 18px 44px;
-  font-size: 16px;
-  font-weight: 700;
-  border-radius: 999px;
-  color: #1a1a1a;
-  background: linear-gradient(135deg, #c9a23f, #ffd777);
-  box-shadow: 0 30px 80px rgba(201,162,63,0.6);
-  transition: all 0.35s ease;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 16px 38px;
+  font-size: 14.5px;
+  font-weight: 600;
+  letter-spacing: 0.35px;
+
+  color: #f6e7b2;
+  background: transparent;
+
+  border: 1.5px solid rgba(255, 215, 120, 0.55);
+  border-radius: 10px; /* 🔥 NOT pill – unique */
+
   text-decoration: none;
+  overflow: hidden;
+
+  transition:
+    color 0.3s ease,
+    border-color 0.3s ease;
 }
 
-.cta-button:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 45px 110px rgba(201,162,63,0.85);
+/* KINETIC FILL LAYER */
+.cta-button::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background: linear-gradient(
+    120deg,
+    #f2c861,
+    #ffd777,
+    #e6b94e
+  );
+
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.35s ease;
+
+  z-index: -1;
 }
+
+/* HOVER — CONTROLLED ACTIVATION */
+.cta-button:hover {
+  color: #1a1405;
+  border-color: transparent;
+}
+
+.cta-button:hover::before {
+  transform: scaleX(1);
+}
+
+/* ACTIVE — MECHANICAL FEEL */
+.cta-button:active {
+  transform: translateY(1px);
+}
+
+
+/* ======================================================
+   GOLD ANIMATION
+====================================================== */
 
 @keyframes goldFlow {
-  0% { background-position: 0% center; }
-  100% { background-position: 200% center; }
+  0% {
+    background-position: 0% center;
+  }
+  100% {
+    background-position: 220% center;
+  }
 }
 
+/* ======================================================
+   MOBILE (UNCHANGED STRUCTURE, POLISHED)
+====================================================== */
+
 @media (max-width: 768px) {
+  .hero-section {
+    justify-content: center;
+    text-align: center;
+    padding: 120px 24px;
+  }
+
+  .hero-text {
+    max-width: 100%;
+  }
+
   .hero-text h1 {
     white-space: normal;
+  }
+
+  .hero-text .highlight {
+    margin-top: 8px;
   }
 }
 
@@ -490,7 +548,7 @@ footer p {
 
 .about-alaman-clean {
   position: relative;
-  padding: 110px 20px;
+  padding: 50px 20px;
   background: linear-gradient(
     180deg,
     #fff7e6 0%,
@@ -632,7 +690,7 @@ footer p {
 
 .alaman-services {
   position: relative;
-  padding: 110px 20px;
+  padding: 50px 20px;
   background: linear-gradient(
     180deg,
     #ffffff 0%,
@@ -688,6 +746,7 @@ footer p {
 .alaman-services-list {
   max-width: 760px;
   margin: 0 auto 56px;
+  text-align: left; /* 🔥 FIX */
 }
 
 .alaman-services-list ul {
@@ -695,37 +754,40 @@ footer p {
   padding: 0;
   margin: 0;
   display: grid;
-  gap: 24px;
+  gap: 0; /* 🔥 continuous list look */
 }
 
 .alaman-services-list li {
   position: relative;
-  padding-left: 38px;
+  padding: 22px 0 22px 38px; /* 🔥 left bullet spacing */
   font-size: 17px;
   font-weight: 600;
   color: #1a1a1a;
   line-height: 1.65;
 }
 
+/* diamond bullet (LEFT, INLINE) */
 .alaman-services-list li::before {
   content: "◆";
   position: absolute;
   left: 0;
-  top: 2px;
+  top: 26px;
   font-size: 14px;
   color: #9c7a1c;
 }
 
+/* full-width divider (LIKE IMAGE-2) */
 .alaman-services-list li::after {
   content: "";
   position: absolute;
   left: 38px;
-  bottom: -12px;
-  width: 60%;
+  right: 0;
+  bottom: 0;
   height: 1px;
   background: linear-gradient(
     90deg,
     rgba(201,162,63,0.45),
+    rgba(201,162,63,0.15),
     transparent
   );
 }
@@ -762,6 +824,7 @@ footer p {
 
   .alaman-services-list li {
     font-size: 16px;
+    padding-left: 34px;
   }
 
   .alaman-services-note {
@@ -769,12 +832,13 @@ footer p {
   }
 }
 
+
 /* ======================================================
    MISSION & VISION – GOLD PREMIUM CARDS
 ====================================================== */
 
 .alaman-mv-premium {
-  padding: 110px 20px;
+  padding: 50px 20px;
   background: linear-gradient(180deg, #fff7e6, #ffffff);
 }
 
@@ -834,7 +898,7 @@ footer p {
 ====================================================== */
 
 .alaman-testimonials {
-  padding: 120px 20px;
+  padding: 50px 20px;
   background: #ffffff;
 }
 
@@ -901,7 +965,7 @@ footer p {
 ====================================================== */
 
 .alaman-how-we-help {
-  padding: 120px 20px;
+  padding: 50px 20px;
   background: linear-gradient(180deg, #ffffff, #fff7e6);
 }
 
@@ -991,5 +1055,123 @@ footer p {
 
   .help-step {
     flex-direction: column;
+  }
+}
+
+
+/* ======================================================
+   CONTACT INFORMATION – ENTERPRISE THEME
+====================================================== */
+
+.alaman-contact-info {
+  padding: 50px 24px;
+  background: linear-gradient(
+    180deg,
+    #fff7e6 0%,
+    #ffffff 100%
+  );
+  font-family: "Inter", system-ui, sans-serif;
+}
+
+/* WRAPPER */
+.alaman-contact-info-wrap {
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+/* HEADER */
+.contact-info-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.contact-info-header h2 {
+  font-size: clamp(30px, 4vw, 40px);
+  font-weight: 800;
+  color: #1a1a1a;
+  margin-bottom: 14px;
+}
+
+.contact-info-header p {
+  font-size: 17px;
+  line-height: 1.75;
+  color: #4a4a4a;
+  max-width: 620px;
+  margin: 0 auto;
+}
+
+/* CARD */
+.contact-info-card {
+  max-width: 520px;
+  margin: 0 auto;
+  padding: 36px 34px;
+  background: #ffffff;
+  border-radius: 22px;
+  box-shadow:
+    0 25px 80px rgba(201,162,63,0.22);
+  border: 1px solid rgba(201,162,63,0.22);
+}
+
+/* ITEM */
+.contact-info-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+}
+
+/* ICON */
+.contact-icon {
+  min-width: 46px;
+  height: 46px;
+  border-radius: 14px;
+  background: linear-gradient(
+    135deg,
+    #c9a23f,
+    #ffd777
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  color: #1a1a1a;
+  box-shadow: 0 12px 30px rgba(201,162,63,0.45);
+}
+
+/* TEXT */
+.contact-info-text h3 {
+  font-size: 16px;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 4px;
+}
+
+.contact-info-text p {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.contact-info-text a {
+  color: #9c7a1c;
+  text-decoration: none;
+}
+
+.contact-info-text a:hover {
+  text-decoration: underline;
+}
+
+.contact-info-text span {
+  font-size: 14px;
+  color: #666;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .alaman-contact-info {
+    padding: 80px 18px;
+  }
+
+  .contact-info-card {
+    padding: 30px 24px;
   }
 }

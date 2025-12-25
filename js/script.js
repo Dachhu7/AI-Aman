@@ -64,7 +64,8 @@ document.addEventListener("DOMContentLoaded", function () {
   if (aboutSection) {
     aboutSection.style.opacity = "0";
     aboutSection.style.transform = "translateY(30px)";
-    aboutSection.style.transition = "opacity 0.8s ease-out, transform 0.8s ease-out";
+    aboutSection.style.transition =
+      "opacity 0.8s ease-out, transform 0.8s ease-out";
 
     const observer = new IntersectionObserver(
       (entries, observer) => {
@@ -93,7 +94,6 @@ document.addEventListener("DOMContentLoaded", function () {
       const mobile = document.getElementById("mobile").value.trim();
       const message = document.getElementById("message").value.trim();
 
-      // Name validation
       if (name === "") {
         isValid = false;
         document.getElementById("nameError").classList.remove("d-none");
@@ -101,7 +101,6 @@ document.addEventListener("DOMContentLoaded", function () {
         document.getElementById("nameError").classList.add("d-none");
       }
 
-      // Email validation
       const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
       if (!emailPattern.test(email)) {
         isValid = false;
@@ -110,7 +109,6 @@ document.addEventListener("DOMContentLoaded", function () {
         document.getElementById("emailError").classList.add("d-none");
       }
 
-      // Mobile number validation
       const mobilePattern = /^[0-9]{10}$/;
       if (!mobilePattern.test(mobile)) {
         isValid = false;
@@ -119,7 +117,6 @@ document.addEventListener("DOMContentLoaded", function () {
         document.getElementById("mobileError").classList.add("d-none");
       }
 
-      // Message validation
       if (message === "") {
         isValid = false;
         document.getElementById("messageError").classList.remove("d-none");
@@ -179,46 +176,9 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
+const hamburger = document.querySelector(".hamburger");
+const navBox = document.querySelector(".nav-box");
 
-let phraseIndex = 0;
-let charIndex = 0;
-let typingDelay = 100;
-let erasingDelay = 60;
-let nextPhraseDelay = 2000;
-
-function type() {
-  if (!typedText) return;
-  if (charIndex < phrases[phraseIndex].length) {
-    typedText.textContent += phrases[phraseIndex].charAt(charIndex);
-    charIndex++;
-    setTimeout(type, typingDelay);
-  } else {
-    setTimeout(erase, nextPhraseDelay);
-  }
-}
-
-function erase() {
-  if (!typedText) return;
-  if (charIndex > 0) {
-    typedText.textContent = phrases[phraseIndex].substring(0, charIndex - 1);
-    charIndex--;
-    setTimeout(erase, erasingDelay);
-  } else {
-    phraseIndex++;
-    if (phraseIndex >= phrases.length) phraseIndex = 0;
-    setTimeout(type, typingDelay);
-  }
-}
-
-document.addEventListener('DOMContentLoaded', () => {
-  if (typedText && phrases.length) setTimeout(type, 800);
+hamburger.addEventListener("click", () => {
+  navBox.classList.toggle("open");
 });
-
-
-  const hamburger = document.querySelector(".hamburger");
-  const navBox = document.querySelector(".nav-box");
-
-  hamburger.addEventListener("click", () => {
-    navBox.classList.toggle("open");
-  });
-

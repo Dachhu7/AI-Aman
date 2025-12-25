@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Security Ecosystem - AI Aman Enterprise</title>
-    <link rel="icon" type="image/png" href="/images/logo.png">
+    <title>Security Ecosystem - AL Aman Enterprise</title>
+    <link rel="icon" type="image/png" href="/images/favicon.png">
 
     <!-- Bootstrap CSS CDN Link -->
     <link
@@ -49,8 +49,8 @@
   <div class="topbar-container">
 
     <a href="#" class="topbar-logo">
-      <img src="images/logo.png" alt="AI Aman Logo" />
-      <span>AI Aman</span>
+      <img src="images/logo.png" alt="AL Aman Logo" />
+      
     </a>
 
     <!-- Hamburger (Mobile Only) -->
@@ -123,8 +123,7 @@
 ========================= */
 
 .service-section {
-  padding: 120px 24px;
-  margin-bottom: 80px;
+  padding: 50px 24px;
   background: linear-gradient(
     180deg,
     #ffffff,
@@ -496,11 +495,13 @@
   <div class="footer">
     <div class="footer-container">
 
-      <!-- Company Logo & Name -->
+      <!-- Company Logo & Tagline -->
       <div class="footer-brand">
-        <h3 class="pt-2" data-aos="fade-up">
-          AI Aman  
-        </h3>
+        <img src="images/logo.png" alt="AL Aman Enterprise IT Logo" class="footer-logo" />
+
+        <p class="footer-tagline">
+          Secure. Resilient. Scalable.
+        </p>
       </div>
 
       <!-- Navigation Links -->
@@ -516,30 +517,14 @@
         <a href="contact.html" class="mx-2"><i class="bi bi-envelope"></i> Contact Us</a>
       </div>
 
+      <hr class="footer-divider" />
 
-        <hr class="footer-divider" />
-        <p class="copyright">
-          &copy; 2025 AI Aman | All Rights Reserved.
-        </p>
-      </div>
+      <p class="copyright">
+        &copy; 2025 AL Aman | All Rights Reserved.
+      </p>
+
     </div>
   </div>
-
-  <!-- Social Buttons Script -->
-  <script>
-    function visitInstagram() {
-      window.open("https://www.instagram.com/", "_blank");
-    }
-    function sendEmail() {
-      window.location.href = "";
-    }
-    function visitTwitter() {
-      window.open("https://twitter.com/", "_blank");
-    }
-    function visitLinkedIn() {
-      window.open("https://www.linkedin.com/", "_blank");
-    }
-  </script>
 </footer>
     <!-- JavaScript for Mobile Menu Toggle -->
     <script>
@@ -556,29 +541,6 @@
       }
     </script>
 
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        let progressBars = document.querySelectorAll(".progress-bar");
-
-        function animateProgressBars() {
-          progressBars.forEach(bar => {
-            let width = bar.getAttribute("data-width");
-            bar.style.width = width;
-          });
-        }
-
-        let expertiseSection = document.querySelector(".vconnect-expertise");
-        if (expertiseSection) {
-          let observer = new IntersectionObserver(entries => {
-            if (entries[0].isIntersecting) {
-              animateProgressBars();
-            }
-          }, { threshold: 0.5 });
-
-          observer.observe(expertiseSection);
-        }
-      });
-    </script>
 
     <!-- AOS Library Script Initialization -->
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
