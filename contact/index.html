@@ -14,7 +14,7 @@
     />
 
     <!-- Custom CSS File -->
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="/css/style.css" />
 
     <!-- Google Font Link -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -48,9 +48,8 @@
 <nav class="topbar">
   <div class="topbar-container">
 
-    <a href="#" class="topbar-logo">
-      <img src="images/logo.png" alt="AL Aman Logo" />
-      
+    <a href="/" class="topbar-logo">
+      <img src="/images/logo.png" alt="AL Aman Logo" />
     </a>
 
     <!-- Hamburger (Mobile Only) -->
@@ -63,35 +62,35 @@
     <div class="nav-box">
       <ul class="topbar-links">
         <li class="nav-item">
-          <a class="nav-link" href="index.html">
+          <a class="nav-link" href="/">
             <i class="bi bi-house-door-fill"></i>
             <span>Home</span>
           </a>
         </li>
 
         <li class="nav-item">
-          <a class="nav-link" href="DeliveryModel.html">
+          <a class="nav-link" href="/delivery-model/">
             <i class="bi bi-person-lines-fill"></i>
             <span>Delivery Model</span>
           </a>
         </li>
 
         <li class="nav-item">
-          <a class="nav-link" href="EcoSystem.html">
+          <a class="nav-link" href="/security-ecosystem/">
             <i class="bi bi-tools"></i>
             <span>Our Security Ecosystem</span>
           </a>
         </li>
 
         <li class="nav-item">
-          <a class="nav-link" href="capabilities.html">
+          <a class="nav-link" href="/capabilities/">
             <i class="bi bi-briefcase-fill"></i>
             <span>Capabilities</span>
           </a>
         </li>
 
         <li class="nav-item">
-          <a class="nav-link" href="contact.html">
+          <a class="nav-link" href="/contact/">
             <i class="bi bi-envelope-paper-fill"></i>
             <span>Contact Us</span>
           </a>
@@ -99,7 +98,7 @@
       </ul>
     </div>
 
-    <a href="contact.html" class="topbar-cta">Let's Connect</a>
+    <a href="/contact/" class="topbar-cta">Let's Connect</a>
 
   </div>
 </nav>
@@ -312,7 +311,7 @@
 
 <script>
   (function(){
-    emailjs.init("YOUR_PUBLIC_KEY");
+    emailjs.init("VWcZ68crTcpayHm2P");
   })();
 
   const form = document.getElementById("contact-form");
@@ -324,8 +323,8 @@
     status.textContent = "Sending message...";
 
     emailjs.send(
-      "YOUR_SERVICE_ID", 
-      "YOUR_TEMPLATE_ID", 
+      "service_1fu7uq9", 
+      "template_t4ywtpe", 
       {
         user_name: form.user_name.value,
         user_email: form.user_email.value,
@@ -362,7 +361,7 @@
 
       <!-- Company Logo & Tagline -->
       <div class="footer-brand">
-        <img src="images/logo.png" alt="AL Aman Enterprise IT Logo" class="footer-logo" />
+        <img src="/images/logo.png" alt="AL Aman Enterprise IT Logo" class="footer-logo" />
 
         <p class="footer-tagline">
           Secure. Resilient. Scalable.
@@ -371,15 +370,33 @@
 
       <!-- Navigation Links -->
       <div class="link-group d-flex flex-wrap justify-content-center align-items-center" data-aos="fade-up">
-        <a href="index.html" class="mx-2"><i class="bi bi-house-door"></i> Home</a>
+        <a href="/" class="mx-2">
+          <i class="bi bi-house-door-fill"></i> Home
+        </a>
+
         <span class="mx-2 text-white">|</span>
-        <a href="DeliveryModel.html" class="mx-2"><i class="bi bi-info-circle"></i> Delivery Model</a>
+
+        <a href="/delivery-model/" class="mx-2">
+          <i class="bi bi-person-lines-fill"></i> Delivery Model
+        </a>
+
         <span class="mx-2 text-white">|</span>
-        <a href="EcoSystem.html" class="mx-2"><i class="bi bi-briefcase"></i> Our Security Ecosystem</a>
+
+        <a href="/security-ecosystem/" class="mx-2">
+          <i class="bi bi-tools"></i> Our Security Ecosystem
+        </a>
+
         <span class="mx-2 text-white">|</span>
-        <a href="capabilities.html" class="mx-2"><i class="bi bi-people"></i> Capabilities</a>
+
+        <a href="/capabilities/" class="mx-2">
+          <i class="bi bi-briefcase-fill"></i> Capabilities
+        </a>
+
         <span class="mx-2 text-white">|</span>
-        <a href="contact.html" class="mx-2"><i class="bi bi-envelope"></i> Contact Us</a>
+
+        <a href="/contact/" class="mx-2">
+          <i class="bi bi-envelope-paper-fill"></i> Contact Us
+        </a>
       </div>
 
       <hr class="footer-divider" />
@@ -420,6 +437,6 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
 
     <!-- Custom JS File Linking -->
-    <script src="js/script.js"></script>
+    <script src="/js/script.js"></script>
   </body>
 </html>
